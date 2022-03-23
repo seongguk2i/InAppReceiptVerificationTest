@@ -18,12 +18,12 @@ namespace InAppReceiptVerificationTest
         public const int IOS_RV_SUCCESS = 0;    //ios영수증 검증 결과 성공
         public const int IOS_RV_FAIL_RETRY = 1;    //샌드박스에서 재검증필요
         public const int IOS_RV_FAIL = -1;    //검증 실패
+
         /*ios영수증 검증
         itemID = 해당 영수증으로 결제한 아이템의 ID
         receiptData = 영수증 데이터
         bProduct = 프로덕트에서 검증할지 샌드박스에서 검증할지, 기본적으로 프로덕트에서 검증하고 리턴값이 IOS_RV_FAIL_RETRY  인경우에 샌드박스에서 검증한다.
         */
-
         public static int VerifyIOSReceipt(ref string itemID, string receiptData, bool bProduct)
         {
             try
